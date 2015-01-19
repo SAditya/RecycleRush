@@ -5,6 +5,12 @@ public class NegInertia {
 	double negInertiaAccumulator;
 	double prevTurnSpeed;
 	
+	
+	public NegInertia(){
+		reset();
+				
+	}
+	
 	public double getTurn(double turnSpeed)
 	{
 		double newTurnSpeed = turnSpeed;
