@@ -1,5 +1,6 @@
 package util;
 
+import core.Drive;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 
 public class Diagnostics {
@@ -20,4 +21,24 @@ public class Diagnostics {
 		
 		return status;
 	}
+
+
+public static boolean isColinearTalonsInSync(Drive d) {
+	PowerDistributionPanel pdp = new PowerDistributionPanel();
+	
+	if(Math.abs((pdp.getCurrent(d.getMtLeftOne().getChannel()) - pdp.getCurrent(d.getMtLeftTwo().getChannel()))) > Config.Drive.tolerance){
+	
+		return false;
+		
+	}
+	
+	if(Math.abs((pdp.getCurrent(d.getMtRightOne().getChannel()) - pdp.getCurrent(d.getMtRightTwo().getChannel()))) > Config.Drive.tolerance){
+		
+		return false;
+		
+	}
+	
+	else return true;
+}
+
 }

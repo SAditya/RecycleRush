@@ -10,6 +10,10 @@ import libs.Matrix;
 import util.Controller;
 
 public class Drive {
+	
+	
+	
+
 	private Talon mtRightOne = new Talon(Config.Drive.chnMtRightOne);
 	private Talon mtRightTwo = new Talon(Config.Drive.chnMtRightTwo);
 	private Talon mtLeftOne = new Talon(Config.Drive.chnMtLeftOne);
@@ -28,6 +32,32 @@ public class Drive {
 	/**
 	 * Moves the robot in relation to the field instead of the robot
 	 */
+	
+	public Talon getMtRightOne() {
+		return mtRightOne;
+	}
+
+	public Talon getMtRightTwo() {
+		return mtRightTwo;
+	}
+
+	public Talon getMtLeftOne() {
+		return mtLeftOne;
+	}
+
+	public Talon getMtLeftTwo() {
+		return mtLeftTwo;
+	}
+
+	public Talon getMtFront() {
+		return mtFront;
+	}
+
+	public Talon getMtBack() {
+		return mtBack;
+	}
+	
+	
 	public void fieldCentric() 
 	{
 		double rightJoyXPos = contr.getRightX();
