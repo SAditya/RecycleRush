@@ -72,9 +72,10 @@ public class Robot extends IterativeRobot
     public void teleopPeriodic() 
     {
     	contrDrive.update();
-    	drive.run();
+//    	drive.run();
     	elevator.runPID();
-    	claw.run();
+    	elevator.printValues();
+//    	claw.run();
         dashboard.update();
 //    	dashboard.displayCurrent();
 //    	dashboard.displayDpad();

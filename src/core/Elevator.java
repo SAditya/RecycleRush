@@ -515,4 +515,16 @@ public class Elevator
 		pidElevator.stop();
 		pidElevator.reset();
 	}
+	
+	public void printValues()
+	{
+		System.out.println
+		(
+				"Encoder " + enc.get() +
+				" : Encoder Distrance " + enc.getDistance() + 
+				" : Encoder Rate " + enc.getRate() + 
+				" : Limit Top " + limitTop.get() +
+				" : Limit Bottom " + limitBot.get()
+		);
+	}
 }
